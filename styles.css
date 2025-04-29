@@ -1,41 +1,89 @@
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header styles */
 header {
-    background: #333;
+    background: #007BFF; /* Bootstrap primary color */
     color: #fff;
-    padding: 10px 0;
+    padding: 15px 0;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
 }
 
 nav ul li {
     display: inline;
-    margin-right: 20px;
+    margin: 0 15px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background 0.3s, color 0.3s;
 }
 
+nav ul li a:hover {
+    background: #0056b3; /* Darker shade for hover effect */
+    border-radius: 5px;
+}
+
+/* Main content styles */
 main {
+    max-width: 800px;
+    margin: 20px auto;
     padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+h1, h2 {
+    color: #007BFF; /* Consistent color for headings */
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Footer styles */
 footer {
     text-align: center;
-    padding: 10px 0;
+    padding: 15px 0;
     background: #333;
     color: #fff;
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
 }
