@@ -3,147 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Simple Webpage</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 1em;
-            text-align: center;
-        }
-        section {
-            padding: 20px;
-            margin: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        footer {
-            text-align: center;
-            padding: 1em;
-            background-color: #333;
-            color: white;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-        table {
-            border-collapse: collapse;
-            width: 50%;
-            margin: 20px auto;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: center;
-        }
-        th {
-            background-color: #4CAF50;
-            color: white;
-        }
-        td {
-            background-color: #f9f9f9;
-        }
-        .tabs {
-            display: flex;
-            cursor: pointer;
-            margin: 20px 0;
-        }
-        .tab {
-            padding: 10px 20px;
-            background-color: #f1f1f1;
-            border: 1px solid #ccc;
-            border-bottom: none;
-            margin-right: 5px;
-            transition: background-color 0.3s;
-        }
-        .tab:hover {
-            background-color: #ddd;
-        }
-        .active {
-            background-color: #fff;
-            border-top: 2px solid #007BFF;
-            font-weight: bold;
-        }
-        .content {
-            border: 1px solid #ccc;
-            padding: 20px;
-            background-color: #fff;
-        }
-    </style>
+    <title>Home - IT Ethics Website</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to My Webpage</h1>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="ethics.html">Ethics</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    
-    <section>
-        <h2>About This Page</h2>
-        
-        <!-- Menu Tabs -->
-        <div class="tabs">
-            <div class="tab active" onclick="showContent('tab1')">Tab 1</div>
-            <div class="tab" onclick="showContent('tab2')">Tab 2</div>
-        </div>
-
-        <!-- Tab Content -->
-        <div class="content" id="tab1Content">
-            <h2>Content for Tab 1</h2>
-            <p>This is the content displayed when Tab 1 is active.</p>
-        </div>
-
-        <div class="content" id="tab2Content" style="display: none;">
-            <h2>Content for Tab 2</h2>
-            <p>This is the content displayed when Tab 2 is active.</p>
-        </div>
-
-        <table>
-            <tr>
-                <th>Name</th>
-                <td>Umer Pirzada</td>
-            </tr>
-            <tr>
-                <th>Introduction</th>
-                <td>Hi, I am a junior at GMU in the IT Major. I have made this webpage for my IT 304 class.</td>
-            </tr>
-            <tr>
-                <th>Hobbies</th>
-                <td>My hobbies include playing video games and going to the gym.</td>
-            </tr>
-        </table>
-    </section>
-
+    <main>
+        <h1>Welcome to the IT Ethics Website</h1>
+        <p>This website provides information on IT-related ethics and guidelines for developers and data scientists.</p>
+    </main>
     <footer>
-        <p>&copy; Umer Pirzada.</p>
+        <p>&copy; 2023 IT Ethics Website</p>
     </footer>
-
-    <script>
-        function showContent(tab) {
-            const tab1Content = document.getElementById('tab1Content');
-            const tab2Content = document.getElementById('tab2Content');
-            const tabs = document.querySelectorAll('.tab');
-
-            if (tab === 'tab1') {
-                tab1Content.style.display = 'block';
-                tab2Content.style.display = 'none';
-                tabs[0].classList.add('active');
-                tabs[1].classList.remove('active');
-            } else {
-                tab1Content.style.display = 'none';
-                tab2Content.style.display = 'block';
-                tabs[1].classList.add('active');
-                tabs[0].classList.remove('active');
-            }
-        }
-    </script>
-
 </body>
 </html>
